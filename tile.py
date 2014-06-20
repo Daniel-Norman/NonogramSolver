@@ -5,12 +5,12 @@ Created on Jun 16, 2014
 Copyright Daniel Norman 2014
 '''
 class Tile(object):
-    owner = None
-    type = 'none'
     def __init__(self):
         '''
         Constructor
         '''
+        self.owner = None
+        self.type = 'none'
         pass
     def set_filled(self, owner):
         self.owner = owner
@@ -20,5 +20,10 @@ class Tile(object):
         
     def set_empty(self):
         self.type = 'empty'
+        
+    def is_filled(self):
+        return self.type == 'filled'
+    def is_empty(self):
+        return self.type == 'empty'
 
         
