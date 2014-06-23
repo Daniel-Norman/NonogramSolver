@@ -16,3 +16,6 @@ class Number(object):
 
     def is_filled(self):
         return self.filled >= self.size
+    
+    def __repr__(self):
+        return 'Number: %s    Filled: %s' % (self.size, self.filled)
